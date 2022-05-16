@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MainBanner></MainBanner>
+    <ExploreArea></ExploreArea>
+    <ParticipateArea></ParticipateArea>
+    <EnjoyArea></EnjoyArea>
+    <SubscribeArea></SubscribeArea>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import MainBanner from '@/container/MainBanner.vue'
+import ExploreArea from '@/components/Home/ExploreArea.vue'
+import ParticipateArea from '@/components/Home/ParticipateArea.vue'
+import EnjoyArea from '@/components/Home/EnjoyArea.vue'
+import SubscribeArea from '@/components/Home/SubscribeArea.vue'
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    MainBanner,
+    ExploreArea,
+    ParticipateArea,
+    EnjoyArea,
+    SubscribeArea
   }
 }
 </script>
+
+<style lang="scss">
+  .home{
+    overflow: hidden;
+  }
+</style>

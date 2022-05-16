@@ -1,0 +1,29 @@
+$main-green: #769763;
+$medium-green: #a1b893;
+$light-green: #f1f5ee;
+$hover-yellow: #ffc300;
+$svg-filter: hue-rotate(-51deg) saturate(3.9) brightness(1.43);
+$white-bg: rgba(255, 255, 255, 0.9);
+$text-gray: #737373;
+$light-gray: #acacac;
+$point-yellow: #f1d675;
+$cht-font: "Noto Sans TC", sans-serif;
+$en-font: "Open Sans", sans-serif;
+
+@mixin pad {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: 390px) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
