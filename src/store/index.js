@@ -143,14 +143,12 @@ export default createStore({
     async CountyApi ({ commit }) {
       await axios.get(
         this.state.countyUrl
-      )
-        .then(res => {
-          if (!this.state.zipCode.length) {
-            commit('getZipCode', res.data)
-          }
-          commit('cityData', res.data)
-        })
-        .catch(err => console.log(err))
+      ).then(res => {
+        if (!this.state.zipCode.length) {
+          commit('getZipCode', res.data)
+        }
+        commit('cityData', res.data)
+      }).catch(err => console.log(err))
     },
     async TDXApi ({ commit }, url) {
       if (this.state.apiError) commit('apiError', false)
@@ -169,7 +167,6 @@ export default createStore({
       document.body.scrollTop = 0
       document.documentElement.scrollTop = 0
     }
-
   },
   modules: {
   }
