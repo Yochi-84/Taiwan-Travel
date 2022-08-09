@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export default createStore({
   state: {
-    countyUrl: '../CityCountyData.json',
+    countyUrl: './CityCountyData.json',
     headers: {
       headers: ''
     },
