@@ -71,7 +71,6 @@ export default {
           const obj = {}
           obj.cityName = item.CityName
           obj.selected = false
-          console.log(obj)
           return obj
         })
       })
